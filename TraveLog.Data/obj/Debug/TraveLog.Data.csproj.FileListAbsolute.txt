@@ -1,0 +1,15 @@
+C:\Users\gcasa\Desktop\ElevenFiftyProjects\RedBadge\TraveLog\TraveLog.Data\bin\Debug\TraveLog.Data.dll.config
+C:\Users\gcasa\Desktop\ElevenFiftyProjects\RedBadge\TraveLog\TraveLog.Data\bin\Debug\TraveLog.Data.dll
+C:\Users\gcasa\Desktop\ElevenFiftyProjects\RedBadge\TraveLog\TraveLog.Data\bin\Debug\TraveLog.Data.pdb
+C:\Users\gcasa\Desktop\ElevenFiftyProjects\RedBadge\TraveLog\TraveLog.Data\bin\Debug\EntityFramework.dll
+C:\Users\gcasa\Desktop\ElevenFiftyProjects\RedBadge\TraveLog\TraveLog.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\gcasa\Desktop\ElevenFiftyProjects\RedBadge\TraveLog\TraveLog.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\gcasa\Desktop\ElevenFiftyProjects\RedBadge\TraveLog\TraveLog.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\gcasa\Desktop\ElevenFiftyProjects\RedBadge\TraveLog\TraveLog.Data\bin\Debug\EntityFramework.xml
+C:\Users\gcasa\Desktop\ElevenFiftyProjects\RedBadge\TraveLog\TraveLog.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\gcasa\Desktop\ElevenFiftyProjects\RedBadge\TraveLog\TraveLog.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\gcasa\Desktop\ElevenFiftyProjects\RedBadge\TraveLog\TraveLog.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\gcasa\Desktop\ElevenFiftyProjects\RedBadge\TraveLog\TraveLog.Data\obj\Debug\TraveLog.Data.csproj.AssemblyReference.cache
+C:\Users\gcasa\Desktop\ElevenFiftyProjects\RedBadge\TraveLog\TraveLog.Data\obj\Debug\TraveLog.Data.csproj.CoreCompileInputs.cache
+C:\Users\gcasa\Desktop\ElevenFiftyProjects\RedBadge\TraveLog\TraveLog.Data\obj\Debug\TraveLog.Data.dll
+C:\Users\gcasa\Desktop\ElevenFiftyProjects\RedBadge\TraveLog\TraveLog.Data\obj\Debug\TraveLog.Data.pdb

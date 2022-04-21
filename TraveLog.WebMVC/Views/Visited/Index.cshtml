@@ -1,0 +1,67 @@
+﻿@model IEnumerable<TraveLog.Models.VisitedListItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Visited Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", "Location")
+</p>
+@if (TempData.ContainsKey("SaveResult"))
+{
+    <div class="alert alert-success fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+        @TempData["SaveResult"]
+    </div>
+}
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.VisitedId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateVisited)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CountryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cities)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InitialThoughts)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.VisitedId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateVisited)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CountryName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cities)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InitialThoughts)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.VisitedId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.VisitedId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.VisitedId })
+            </td>
+        </tr>
+    }
+
+</table>

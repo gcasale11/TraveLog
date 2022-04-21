@@ -168,8 +168,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
+    <Compile Include="Controllers\CountryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LocationController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\VisitedController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -234,6 +238,26 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Visited\Index.cshtml" />
+    <Content Include="Views\Visited\Create.cshtml" />
+    <Content Include="Views\Visited\Details.cshtml" />
+    <Content Include="Views\Visited\Edit.cshtml" />
+    <Content Include="Views\Visited\Delete.cshtml" />
+    <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Views\Location\Index.cshtml" />
+    <Content Include="Views\Location\Create.cshtml" />
+    <Content Include="Views\Location\Details.cshtml" />
+    <Content Include="Views\Location\Edit.cshtml" />
+    <Content Include="Views\Location\Delete.cshtml" />
+    <Content Include="Views\Blog\Create.cshtml" />
+    <Content Include="Views\Blog\Details.cshtml" />
+    <Content Include="Views\Blog\Edit.cshtml" />
+    <Content Include="Views\Blog\Delete.cshtml" />
+    <Content Include="Views\Country\Index.cshtml" />
+    <Content Include="Views\Country\Create.cshtml" />
+    <Content Include="Views\Country\Details.cshtml" />
+    <Content Include="Views\Country\Edit.cshtml" />
+    <Content Include="Views\Country\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -54,11 +54,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BlogCreate.cs" />
+    <Compile Include="BlogDetail.cs" />
+    <Compile Include="BlogEdit.cs" />
+    <Compile Include="BlogListItem.cs" />
+    <Compile Include="CountryCreate.cs" />
+    <Compile Include="CountryDetail.cs" />
+    <Compile Include="CountryEdit.cs" />
+    <Compile Include="CountryListItem.cs" />
+    <Compile Include="LocationCreate.cs" />
+    <Compile Include="LocationDetail.cs" />
+    <Compile Include="LocationEdit.cs" />
+    <Compile Include="LocationListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VisitedEdit.cs" />
+    <Compile Include="VisitedCreate.cs" />
+    <Compile Include="VisitedDetail.cs" />
+    <Compile Include="VisitedListItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TraveLog.Data\TraveLog.Data.csproj">
+      <Project>{272B95BC-B456-404A-8C66-DEA040B3F74D}</Project>
+      <Name>TraveLog.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

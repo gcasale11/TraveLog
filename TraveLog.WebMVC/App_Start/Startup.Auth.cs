@@ -6,6 +6,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using TraveLog.Data;
+using TraveLog.Web;
 using TraveLog.WebMVC.Models;
 
 namespace TraveLog.WebMVC

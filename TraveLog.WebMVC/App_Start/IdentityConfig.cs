@@ -11,7 +11,6 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using TraveLog.Data;
-using TraveLog.WebMVC.Models;
 
 namespace TraveLog.WebMVC
 {

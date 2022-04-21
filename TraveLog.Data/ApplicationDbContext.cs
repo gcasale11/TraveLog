@@ -17,7 +17,10 @@ namespace TraveLog.Data
             return new ApplicationDbContext();
         }
 
-       //public DbSet<Visited> Visitedd { get; set; }
+        public DbSet<Visited> Visitedd { get; set; }
+        public DbSet<Country> Countries { get; set; }
+        public DbSet<Blog> Blogs { get; set; }
+        public DbSet<Location> Locations { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

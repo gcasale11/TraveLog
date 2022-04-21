@@ -56,13 +56,34 @@
   <ItemGroup>
     <Compile Include="ApplicationUser.cs" />
     <Compile Include="ApplicationDbContext.cs" />
+    <Compile Include="Blog.cs" />
+    <Compile Include="Country.cs" />
     <Compile Include="IdentityUserLoginConfiguration.cs" />
     <Compile Include="IdentityUserRoleConfiguration.cs" />
+    <Compile Include="Location.cs" />
+    <Compile Include="Migrations\202204210158325_InitialCreate.cs" />
+    <Compile Include="Migrations\202204210158325_InitialCreate.Designer.cs">
+      <DependentUpon>202204210158325_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204210256409_BigInitialMigration.cs" />
+    <Compile Include="Migrations\202204210256409_BigInitialMigration.Designer.cs">
+      <DependentUpon>202204210256409_BigInitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Visited.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202204210158325_InitialCreate.resx">
+      <DependentUpon>202204210158325_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204210256409_BigInitialMigration.resx">
+      <DependentUpon>202204210256409_BigInitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -15,5 +15,7 @@ namespace TraveLog.Data
             // Add custom user claims here
             return userIdentity;
         }
+        public string UserId { get; set; }
+        public string ProfileName { get; set; }
     }
 }

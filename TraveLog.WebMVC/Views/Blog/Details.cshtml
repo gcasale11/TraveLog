@@ -1,0 +1,50 @@
+﻿@model TraveLog.Models.BlogDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Blog Details</h2>
+
+<div>
+    <h4>Here are your memory log from your visit</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BlogId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BlogId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VisitedId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VisitedId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProfileName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProfileName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Thoughts)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Thoughts)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BlogId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

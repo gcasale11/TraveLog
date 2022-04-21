@@ -1,0 +1,58 @@
+﻿@model TraveLog.Models.CountryDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Country Details</h2>
+
+<div>
+    <h4>Here are the Country details from your visit</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CountryId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CountryId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CountryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CountryName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Continent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Continent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LocationId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LocationId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cities)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cities)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CountryId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

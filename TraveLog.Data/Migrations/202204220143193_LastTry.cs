@@ -3,7 +3,7 @@ namespace TraveLog.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCreate : DbMigration
+    public partial class LastTry : DbMigration
     {
         public override void Up()
         {
@@ -13,10 +13,19 @@ namespace TraveLog.Data.Migrations
                     {
                         BlogId = c.Int(nullable: false, identity: true),
                         Thoughts = c.String(),
+                        VisitedId = c.Int(nullable: false),
+                        CountryId = c.Int(nullable: false),
+                        LocationId = c.Int(nullable: false),
                         UserId = c.String(maxLength: 128),
                     })
                 .PrimaryKey(t => t.BlogId)
                 .ForeignKey("dbo.ApplicationUser", t => t.UserId)
+                .ForeignKey("dbo.Country", t => t.CountryId, cascadeDelete: true)
+                .ForeignKey("dbo.Location", t => t.LocationId, cascadeDelete: true)
+                .ForeignKey("dbo.Visited", t => t.VisitedId, cascadeDelete: true)
+                .Index(t => t.VisitedId)
+                .Index(t => t.CountryId)
+                .Index(t => t.LocationId)
                 .Index(t => t.UserId);
             
             CreateTable(
@@ -108,6 +117,19 @@ namespace TraveLog.Data.Migrations
                 .Index(t => t.UserId);
             
             CreateTable(
+                "dbo.Visited",
+                c => new
+                    {
+                        VisitedId = c.Int(nullable: false, identity: true),
+                        DateVisited = c.DateTime(nullable: false),
+                        InitialThoughts = c.String(),
+                        UserId = c.String(maxLength: 128),
+                    })
+                .PrimaryKey(t => t.VisitedId)
+                .ForeignKey("dbo.ApplicationUser", t => t.UserId)
+                .Index(t => t.UserId);
+            
+            CreateTable(
                 "dbo.IdentityRole",
                 c => new
                     {
@@ -116,46 +138,21 @@ namespace TraveLog.Data.Migrations
                     })
                 .PrimaryKey(t => t.Id);
             
-            CreateTable(
-                "dbo.Visited",
-                c => new
-                    {
-                        VisitedId = c.Int(nullable: false, identity: true),
-                        DateVisited = c.DateTime(nullable: false),
-                        InitialThoughts = c.String(),
-                        UserId = c.String(maxLength: 128),
-                        BlogId = c.Int(nullable: false),
-                        LocationId = c.Int(nullable: false),
-                        CountryId = c.Int(nullable: false),
-                    })
-                .PrimaryKey(t => t.VisitedId)
-                .ForeignKey("dbo.ApplicationUser", t => t.UserId)
-                .ForeignKey("dbo.Blog", t => t.BlogId, cascadeDelete: true)
-                .ForeignKey("dbo.Country", t => t.CountryId, cascadeDelete: true)
-                .ForeignKey("dbo.Location", t => t.LocationId, cascadeDelete: true)
-                .Index(t => t.UserId)
-                .Index(t => t.BlogId)
-                .Index(t => t.LocationId)
-                .Index(t => t.CountryId);
-            
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.Visited", "LocationId", "dbo.Location");
-            DropForeignKey("dbo.Visited", "CountryId", "dbo.Country");
-            DropForeignKey("dbo.Visited", "BlogId", "dbo.Blog");
-            DropForeignKey("dbo.Visited", "UserId", "dbo.ApplicationUser");
             DropForeignKey("dbo.IdentityUserRole", "IdentityRole_Id", "dbo.IdentityRole");
+            DropForeignKey("dbo.Blog", "VisitedId", "dbo.Visited");
+            DropForeignKey("dbo.Visited", "UserId", "dbo.ApplicationUser");
+            DropForeignKey("dbo.Blog", "LocationId", "dbo.Location");
             DropForeignKey("dbo.Location", "UserId", "dbo.ApplicationUser");
+            DropForeignKey("dbo.Blog", "CountryId", "dbo.Country");
             DropForeignKey("dbo.Country", "UserId", "dbo.ApplicationUser");
             DropForeignKey("dbo.Blog", "UserId", "dbo.ApplicationUser");
             DropForeignKey("dbo.IdentityUserRole", "ApplicationUser_Id", "dbo.ApplicationUser");
             DropForeignKey("dbo.IdentityUserLogin", "ApplicationUser_Id", "dbo.ApplicationUser");
             DropForeignKey("dbo.IdentityUserClaim", "ApplicationUser_Id", "dbo.ApplicationUser");
-            DropIndex("dbo.Visited", new[] { "CountryId" });
-            DropIndex("dbo.Visited", new[] { "LocationId" });
-            DropIndex("dbo.Visited", new[] { "BlogId" });
             DropIndex("dbo.Visited", new[] { "UserId" });
             DropIndex("dbo.Location", new[] { "UserId" });
             DropIndex("dbo.Country", new[] { "UserId" });
@@ -164,8 +161,11 @@ namespace TraveLog.Data.Migrations
             DropIndex("dbo.IdentityUserLogin", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserClaim", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.Blog", new[] { "UserId" });
-            DropTable("dbo.Visited");
+            DropIndex("dbo.Blog", new[] { "LocationId" });
+            DropIndex("dbo.Blog", new[] { "CountryId" });
+            DropIndex("dbo.Blog", new[] { "VisitedId" });
             DropTable("dbo.IdentityRole");
+            DropTable("dbo.Visited");
             DropTable("dbo.Location");
             DropTable("dbo.Country");
             DropTable("dbo.IdentityUserRole");

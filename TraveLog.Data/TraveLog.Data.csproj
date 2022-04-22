@@ -61,13 +61,9 @@
     <Compile Include="IdentityUserLoginConfiguration.cs" />
     <Compile Include="IdentityUserRoleConfiguration.cs" />
     <Compile Include="Location.cs" />
-    <Compile Include="Migrations\202204210158325_InitialCreate.cs" />
-    <Compile Include="Migrations\202204210158325_InitialCreate.Designer.cs">
-      <DependentUpon>202204210158325_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202204210256409_BigInitialMigration.cs" />
-    <Compile Include="Migrations\202204210256409_BigInitialMigration.Designer.cs">
-      <DependentUpon>202204210256409_BigInitialMigration.cs</DependentUpon>
+    <Compile Include="Migrations\202204220143193_LastTry.cs" />
+    <Compile Include="Migrations\202204220143193_LastTry.Designer.cs">
+      <DependentUpon>202204220143193_LastTry.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -78,11 +74,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202204210158325_InitialCreate.resx">
-      <DependentUpon>202204210158325_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202204210256409_BigInitialMigration.resx">
-      <DependentUpon>202204210256409_BigInitialMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202204220143193_LastTry.resx">
+      <DependentUpon>202204220143193_LastTry.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -7,7 +7,7 @@
 <h2>Visited Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create", "Location")
+    @Html.ActionLink("Create a New Trip", "Create", "Location")
 </p>
 @if (TempData.ContainsKey("SaveResult"))
 {
@@ -27,12 +27,6 @@
             @Html.DisplayNameFor(model => model.DateVisited)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.CountryName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Cities)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.InitialThoughts)
         </th>
         <th></th>
@@ -48,12 +42,6 @@
                 @Html.DisplayFor(modelItem => item.DateVisited)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CountryName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cities)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.InitialThoughts)
             </td>
             <td>
@@ -65,3 +53,6 @@
     }
 
 </table>
+<div>
+    @Html.ActionLink("Back Home", "Index", "Home")
+</div>

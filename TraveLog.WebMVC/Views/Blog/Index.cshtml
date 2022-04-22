@@ -4,10 +4,10 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Blog Index</h2>
+<h2>My Travels</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create a New Trip", "Create", "Location")
 </p>
 @if (TempData.ContainsKey("SaveResult"))
 {
@@ -24,10 +24,16 @@
                 @Html.DisplayNameFor(model => model.BlogId)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.VisitedId)
+                @Html.DisplayNameFor(model => model.DateVisited)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ProfileName)
+                @Html.DisplayNameFor(model => model.InitialThoughts)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cities)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CountryName)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Thoughts)
@@ -37,25 +43,31 @@
 
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.BlogId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.VisitedId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ProfileName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Thoughts)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id=item.BlogId }) |
-                    @Html.ActionLink("Details", "Details", new { id=item.BlogId }) |
-                    @Html.ActionLink("Delete", "Delete", new { id=item.BlogId })
-                </td>
-            </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BlogId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateVisited)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InitialThoughts)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cities)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CountryName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Thoughts)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.BlogId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.BlogId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.BlogId })
+        </td>
+    </tr>
         }
 
     </table>

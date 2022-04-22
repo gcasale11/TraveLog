@@ -7,13 +7,13 @@ namespace TraveLog.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class InitialCreate : IMigrationMetadata
+    public sealed partial class LastTry : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialCreate));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(LastTry));
         
         string IMigrationMetadata.Id
         {
-            get { return "202204210158325_InitialCreate"; }
+            get { return "202204220143193_LastTry"; }
         }
         
         string IMigrationMetadata.Source

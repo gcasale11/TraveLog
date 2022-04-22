@@ -10,7 +10,6 @@ namespace TraveLog.Data.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "TraveLog.Data.ApplicationDbContext";
         }
 
         protected override void Seed(TraveLog.Data.ApplicationDbContext context)

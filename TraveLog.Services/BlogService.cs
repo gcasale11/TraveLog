@@ -21,8 +21,11 @@ namespace TraveLog.Services
             var entity =
                 new Blog()
                 {
-                    
-                    Thoughts = model.Thoughts,
+                    UserId = _userId,
+                    LocationId = model.LocationId,
+                    CountryId = model.CountryId,
+                    VisitedId = model.VisitedId,
+                    Thoughts = model.Thoughts
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -45,6 +48,10 @@ namespace TraveLog.Services
                         new BlogListItem
                         {
                             BlogId = e.BlogId,
+                            DateVisited = e.Visited.DateVisited,
+                            InitialThoughts = e.Visited.InitialThoughts,
+                            Cities = e.Location.Cities,
+                            CountryName = e.Country.CountryName,
                             Thoughts = e.Thoughts,
                         }
                         );
@@ -78,7 +85,7 @@ namespace TraveLog.Services
                     .Blogs
                     .Single(e => e.BlogId == model.BlogId && e.UserId == _userId);
 
-                entity.BlogId = model.BlogId;
+               
                 entity.Thoughts = model.Thoughts;
 
                 return ctx.SaveChanges() == 1;

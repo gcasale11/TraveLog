@@ -9,8 +9,7 @@ namespace TraveLog.Models
     public class BlogDetail
     {
         public int BlogId { get; set; }
-        public int VisitedId { get; set; }
-        public string ProfileName { get; set; }
         public string Thoughts { get; set; }
+     
     }
 }

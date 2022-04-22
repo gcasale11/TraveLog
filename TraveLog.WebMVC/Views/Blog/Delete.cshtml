@@ -4,11 +4,10 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete Blog</h2>
+<h2>Delete</h2>
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>Remove this memory log from your visit</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -20,22 +19,6 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.VisitedId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.VisitedId)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ProfileName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ProfileName)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.Thoughts)
         </dt>
 
@@ -44,8 +27,9 @@
         </dd>
 
     </dl>
-
-    @using (Html.BeginForm()) {
+    <h4>Hitting submit will remove all from your log</h4>
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">

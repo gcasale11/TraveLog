@@ -22,7 +22,8 @@ namespace TraveLog.Services
             var entity =
                 new Visited()
             {
-                DateVisited = model.DateVisited,
+                    UserId = _userId,
+                    DateVisited = model.DateVisited,
                 InitialThoughts = model.InitialThoughts,
 
             };
@@ -48,8 +49,6 @@ namespace TraveLog.Services
                         {
                             VisitedId = e.VisitedId,
                             DateVisited = e.DateVisited,
-                            Cities = e.Location.Cities,
-                            CountryName = e.Country.CountryName,
                             InitialThoughts = e.InitialThoughts
                             
                         }
@@ -71,12 +70,8 @@ namespace TraveLog.Services
                     {
                         VisitedId = entity.VisitedId,
                         DateVisited = entity.DateVisited,
-                        Cities = entity.Location.Cities,
-                        CountryName = entity.Country.CountryName,
-                        Continent = entity.Country.Continent,
                         InitialThoughts = entity.InitialThoughts,
-                        Thoughts = entity.Blog.Thoughts,
-                        UserId = entity.UserId
+                        
 
                     };
             }

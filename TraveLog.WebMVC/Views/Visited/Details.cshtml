@@ -4,10 +4,10 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Your Trip</h2>
+<h2>Visited</h2>
 
 <div>
-    <h4>Here are the full details from your trip</h4>
+    <h4>details that were added to your trip</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -27,30 +27,6 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.CountryName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CountryName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Continent)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Continent)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Cities)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Cities)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.InitialThoughts)
         </dt>
 
@@ -58,37 +34,9 @@
             @Html.DisplayFor(model => model.InitialThoughts)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.UserId)
-        </dt>
+      
 
-        <dd>
-            @Html.DisplayFor(model => model.UserId)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ProfileName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ProfileName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.BlogId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.BlogId)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Thoughts)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Thoughts)
-        </dd>
+        
 
     </dl>
 </div>

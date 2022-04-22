@@ -38,7 +38,7 @@ namespace TraveLog.WebMVC.Controllers
             if (service.CreateBlog(model))
             {
                 TempData["SaveResult"] = "Written memories of your trip had been created";
-                return RedirectToAction("Details", "Visited");
+                return RedirectToAction("Index", "Blog");
             };
 
             ModelState.AddModelError("", "Sorry, unable to compute your written memories");

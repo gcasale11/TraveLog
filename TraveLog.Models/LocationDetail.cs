@@ -11,7 +11,6 @@ namespace TraveLog.Models
         public int LocationId { get; set; }
         public string Cities { get; set; }
 
-        public string CountryName { get; set; }
 
     }
 }

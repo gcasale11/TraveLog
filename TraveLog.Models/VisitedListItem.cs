@@ -13,8 +13,6 @@ namespace TraveLog.Models
 
         [Display(Name="Date Visited")]
         public DateTime DateVisited { get; set; }
-        public string CountryName { get; set; }
-        public string Cities { get; set; }
         public string InitialThoughts { get; set; }
 
     }
